@@ -15,11 +15,14 @@
     <div class="page-wrap">
         <div class="main">
 
-
+            <!-- Slide Bar Start-->
             <div class="sidebar-main">
                 <div class="sidebar-1">
-                    <a href="/" class=" p-3 link-dark text-decoration-none" title="" data-bs-toggle="tooltip"
-                        data-bs-placement="right" data-bs-original-title="Icon-only">
+                    <!-- Slidbar item Start -->
+                    <a href="javascript:void(0);" class=" p-3 link-dark text-decoration-none" title=""
+                        data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Icon-only">
+
+                        <!-- Icon  -->
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
                             <g clip-path="url(#clip0_0_867)">
                                 <path
@@ -32,11 +35,17 @@
                                 </clipPath>
                             </defs>
                         </svg>
+                        <!-- Icon -->
 
                         <span class="fw-bold">Dashboard</span>
                     </a>
-                    <a href="/" class=" p-3 link-dark text-decoration-none" title="" data-bs-toggle="tooltip"
-                        data-bs-placement="right" data-bs-original-title="Icon-only">
+
+                    <!-- Slidbar item End -->
+
+                    <!-- Slidbar item Start -->
+
+                    <a href="javascript:void(0);" class=" p-3 link-dark text-decoration-none" title=""
+                        data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Icon-only">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
                             <mask id="mask0_0_871" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
                                 width="20" height="21">
@@ -51,8 +60,14 @@
 
                         <span class="fw-bold">Assesment</span>
                     </a>
-                    <a href="/" class=" p-3 link-dark text-decoration-none" title="" data-bs-toggle="tooltip"
-                        data-bs-placement="right" data-bs-original-title="Icon-only">
+
+                    <!-- Slidbar item End-->
+
+                    <!-- Slidbar item Start -->
+
+
+                    <a href="javascript:void(0);" class=" p-3 link-dark text-decoration-none" title=""
+                        data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Icon-only">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
                             <mask id="mask0_0_877" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
                                 width="20" height="21">
@@ -67,7 +82,11 @@
 
                         <span class="fw-bold">My Library</span>
                     </a>
+
+                    <!-- Slidbar item End -->
+
                 </div>
+
                 <div class="sidebar-2">
                     <div class="sidebar-2-inner">
 
@@ -94,25 +113,39 @@
                         </div>
                     </div>
                 </div>
-                <a href="/" class=" p-3 link-dark text-decoration-none" title="" data-bs-toggle="tooltip"
-                    data-bs-placement="right" data-bs-original-title="Icon-only">
+
+                <!-- Empty Slidebar Item Start-->
+                <a href="jabascript:void(0);" class=" p-3 link-dark text-decoration-none" title=""
+                    data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Icon-only">
                     <svg>
                     </svg>
 
                     <span class="fw-bold"></span>
                 </a>
-                <a href="/" class=" p-3 link-dark text-decoration-none" title="" data-bs-toggle="tooltip"
-                    data-bs-placement="right" data-bs-original-title="Icon-only">
+                <!-- Empty Slidebar Item End-->
+
+                <!-- Empty Slidebar Item Start-->
+
+                <a href="jabascript:void(0);" class=" p-3 link-dark text-decoration-none" title=""
+                    data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Icon-only">
                     <svg>
                     </svg>
 
                     <span class="fw-bold"></span>
                 </a>
+
+                <!-- Empty Slidebar Item End -->
+
 
 
             </div>
 
+            <!-- Slide Bar End-->
+
+
             <section>
+
+                <!-- Asssement left Section Start -->
                 <div class="left-area">
 
                     <div class="header-main">
@@ -212,14 +245,7 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- <div class="assessment-right">
 
-                            <div class="responsive-toggle">
-                                <div class="resposive-icon">
-                                    <img src="assets/image/mobile_screen_share.svg" alt="">
-                                </div>
-                            </div>
-                        </div> -->
                     </div>
                     <div class="assessment-section">
                         <div class="overview-boxes" id="overview-toggle">
@@ -624,6 +650,7 @@
 
 
                 </div>
+                <!-- Asssement left Section Start -->
 
             </section>
         </div>
@@ -699,6 +726,7 @@
     </div>
     <script>
 
+        // assessment overview show/hide js 
         function assessment() {
             var x = document.getElementById("overview-toggle");
             if (x.style.display === "none") {
@@ -711,6 +739,8 @@
             }
 
         }
+
+        // Responsive Slide-bar js script for sliding the menu bar
         function openNav() {
             document.getElementById("responsive-sidebar").style.left = "0";
             document.getElementById("responsive-sidebar").style.top = "0";
@@ -718,6 +748,8 @@
 
 
         }
+
+        // Responsive Slide-bar js script for close the menu bar
 
         function closeNav() {
 
