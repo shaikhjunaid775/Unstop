@@ -524,7 +524,7 @@ body {
 
 .my-assessment-left {
     display: flex;
-    width: 40px;
+    /* width: 40px; */
     height: 40px;
     padding: 10px;
     justify-content: center;
@@ -1194,18 +1194,27 @@ body {
     .profils:first-child {
         right: 110px !important;
     }
+
+    .overview-boxes{
+        display: none;
+    }
+    .my-assessment-left{
+        display: flex !important;
+    }
 }
 
-
+.my-assessment-left{
+    display: none;
+}
 
 .responsive-head-area {
     display: none;
 }
 
 .toggle-icon button,
-.responside-head button {
-    border: none;
-    background-color: transparent;
+.responside-head button , .icon-container button{
+    border: none !important;
+    background-color: transparent !important;
 }
 
 @media screen and (max-width: 360px) {
@@ -1215,32 +1224,8 @@ body {
     }
 }
 
-.Modal-main {
-    display: flex;
-    width: 45%;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: -1px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-}
 
-.modal-header {
-    display: flex;
-    height: 70px;
-    padding: 30px;
-    justify-content: space-between;
-    align-items: center;
-    align-self: stretch;
-    border-radius: 8px 8px 0px 0px;
-    border: 1px solid var(--system-stroke-2, #DADCE0);
-    background: #FFF;
-}
-
-
-.modal-header span {
+.modal-title {
     color: var(--text-100, #1C4980);
     text-align: center;
     font-family: Inter;
@@ -1248,13 +1233,11 @@ body {
     font-style: normal;
     font-weight: 600;
     line-height: normal;
-
-
 }
 
-.modal-header img {
-    width: 30px;
-    height: 30px;
+.close {
+    border: none;
+    background-color: #fff;
 }
 
 .modal-body {
@@ -1268,32 +1251,7 @@ body {
     background: #FFF;
 }
 
-.modal-body form {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 4px;
-    align-self: stretch;
-}
-
-.form-inputs label {
-    color: var(--text-100, #1C4980);
-    text-align: center;
-    font-family: Inter;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-}
-
-.form-inputs,
-input,
-select,
-textarea {
-    width: 100%;
-}
-
-.form-inputs {
+.modal-box {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -1301,16 +1259,75 @@ textarea {
     align-self: stretch;
 }
 
-.input-type , .input-select , .input-textarea{
+.modal-label {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    align-self: stretch;
+}
+
+.modal-label label {
+    color: var(--text-100, #1C4980);
+    text-align: center;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+
+}
+
+input,
+select,
+textarea {
+    display: flex;
+    height: 50px;
+    padding: 15px;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 8px;
+    border: 1px solid var(--system-stroke-2, #DADCE0);
+    background: #FFF;
+}
+
+.modal-input,
+input,
+select,
+textarea {
     width: 100%;
 }
 
-input[type=text]{
-    color: var(--text-100, #1C4980);
-text-align: center;
-font-family: Inter;
-font-size: 14px;
-font-style: normal;
-font-weight: 500;
-line-height: normal;
+.modal-footer {
+    width: 100%;
+    padding: 20px 30px;
+}
+
+.my-assessment-modal {
+    display: flex;
+    align-items: flex-start;
+    gap: 4px;
+}
+
+.my-assessment-modal .icon-container {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    padding: 4px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 50px;
+    background: var(--text-white, #FFF);
+}
+
+.my-assessment-modal .icon-container img {
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+}
+
+.d-content{
+    display: contents !important;
 }

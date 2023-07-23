@@ -138,7 +138,7 @@
                                         <div class="res-item-box active">
                                             <div class="res-box ">
                                                 <img src="assets/image/note_alt.svg" alt="">
-                                                <span>Assesment</span>
+                                                <span>Assessment</span>
 
                                             </div>
 
@@ -222,7 +222,7 @@
                         </div> -->
                     </div>
                     <div class="assessment-section">
-                        <div class="overview-boxes">
+                        <div class="overview-boxes" id="overview-toggle">
                             <div class="row">
                                 <div class="col-lg-2 col-sm-2 d-flex ">
                                     <div class="item-1">
@@ -365,8 +365,25 @@
                                 </div>
                                 <div class="my-assessment-left">
 
-                                    <div class="item-title ">
-                                        <span></span>
+                                    <div class="my-assessment-modal">
+                                        <div class="icon-container">
+                                            <img src="assets/image/search.svg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="my-assessment-modal">
+                                        <div class="icon-container">
+                                            <img src="assets/image/filter_list_alt.svg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="my-assessment-modal" id="assessment">
+
+                                        <div class=" icon-container">
+                                            <button onclick="assessment()">
+
+                                                <img src="assets/image/bar_chart.svg" alt="">
+                                            </button>
+                                        </div>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -374,8 +391,10 @@
                                 <div class="my-assessment">
                                     <div class="my-assessment-container">
                                         <div class="my-assessment-box">
-                                            <a href="javascript:void(0);" data-toggle="modal" data-target="#Modal">
-                                                <div class="inner-box">
+
+                                            <a href="javascript:void(0);" data-toggle="modal"
+                                                data-target="#exampleModal">
+                                                <div class=" inner-box">
                                                     <div class="box-open">
                                                         <div class="open-icon">
                                                             <img src="assets/image/add.svg" alt="">
@@ -610,84 +629,88 @@
         </div>
     </div>
 
-    <!-- Modal Design -->
+    <!-- Button trigger modal -->
 
 
-
-    <div class="modal  fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
-
-        <div class="Modal-main">
-            <div class="modal-container bg-white w-100">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
                 <div class="modal-header">
-                    <span>Create new assessment</span>
+                    <span class="modal-title" id="exampleModalLabel">Create new assessment</span>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true"><img src="assets/image/cut.svg" alt="" /></span>
-                      </button>
+                        <img src="assets/image/cut.svg" alt="">
+                    </button>
                 </div>
-                <div class="modal-body ">
-                    <form action="">
-                        <div class="form-inputs">
-                            <div class="label-item">
-                                <label for="">Name of assessment</label>
-                            </div>
-                            <div class="input-type">
-
-                                <input type="text" name="" id="" />
-                            </div>
+                <div class="modal-body">
+                    <div class="modal-box">
+                        <div class="modal-label">
+                            <label for="">Name of assessment</label>
                         </div>
-                        <div class="form-inputs">
-                            <div class="label-item">
-                                <label for="">Purpose of the test is </label>
-                            </div>
-                            <div class="input-select">
-                                
-                                <select name="select" id=""></select>
-                            </div>
-
+                        <div class="modal-input">
+                            <input type="text" placeholder="Type here" />
+                        </div>
+                    </div>
+                    <div class="modal-box">
+                        <div class="modal-label">
+                            <label for="">Name of assessment</label>
+                        </div>
+                        <div class="modal-input">
+                            <select name="name" id="">
+                                <option value="select"></option>
                             </select>
                         </div>
-                        <div class="form-inputs">
-                            <div class="label-item">
-                                <label for="">Description</label>
-                            </div>
-                            <div class="input-select">
-                                <select name="select" id=""></select>
-                            </div>
-
+                    </div>
+                    <div class="modal-box">
+                        <div class="modal-label">
+                            <label for="">Description</label>
                         </div>
-                        <div class="form-inputs">
-                            <div class="label-item">
-                                <label for="">Skills</label>
-                            </div>
-                            <div class="input-textarea">
-                                <textarea name="" id="" cols="30" rows="4   "></textarea>
-                            </div>
-                               
-                            </textarea>
+                        <div class="modal-input">
+                            <select name="name" id="">
+                                <!-- <option value="select">select</option> -->
+                            </select>
                         </div>
-                        <div class="form-inputs">
-                            <div class="label-item">
-                                <label for="">Duration of assessment</label>
-                            </div>
-                            <div class="input-type">
-
-                                <input type="text" name="" placeholder="HH:MM:SS" id="">
-                            </div>
+                    </div>
+                    <div class="modal-box">
+                        <div class="modal-label">
+                            <label for="">Skills</label>
                         </div>
-                        <div class="btn w-100 p-0 my-2">
-
-                            <button class="btn btn-primary text-center w-100 ">Save</button>
+                        <div class="modal-input">
+                            <textarea name="" id="" cols="30" rows="10"></textarea>
+                            <input type="search" name="" placeholder="Type here" id="">
                         </div>
-                    </form>
-
+                    </div>
+                    <div class="modal-box">
+                        <div class="modal-label">
+                            <label for="">Duration of assessment</label>
+                        </div>
+                        <div class="modal-input">
+                            <input type="text" placeholder="HH:MM:SS" />
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary w-100">Save</button>
                 </div>
             </div>
-
-
         </div>
     </div>
+    </div>
     <script>
+
+        function assessment() {
+            var x = document.getElementById("overview-toggle");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+                x.style.transition = "3s ease-in";
+            } else {
+                x.style.display = "none";
+                x.style.transition = "3s ease-in";
+
+            }
+
+        }
         function openNav() {
             document.getElementById("responsive-sidebar").style.left = "0";
             document.getElementById("responsive-sidebar").style.top = "0";
@@ -705,6 +728,7 @@
 
 
     </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
