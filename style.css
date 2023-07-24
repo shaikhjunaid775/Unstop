@@ -460,6 +460,10 @@
         border: 1px dashed var(--system-stroke-2, #DADCE0);
         background: var(--system-background, #F6F8FA);
     }
+    .my-assessment-box a{
+
+    text-decoration: none !important;
+    }
 
     .left-area {
         /* display: flex; */
